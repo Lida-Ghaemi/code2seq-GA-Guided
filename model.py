@@ -12,7 +12,15 @@ import tensorflow as tf
 import reader
 from common import Common
 from rouge import FilesRouge
+####
+pip install deap
+pip install bitstring
+import pandas as pd
 
+from deap import base, creator, tools, algorithms
+from scipy.stats import bernoulli
+from bitstring import BitArray
+###
 
 class Model:
     topk = 10
@@ -719,3 +727,4 @@ class Model:
             return True
         else:
             return None
+    
