@@ -80,7 +80,7 @@ class Model:
         best_f1_precision = 0
         best_f1_recall = 0
         epochs_no_improve = 0
-        self.config.NUM_EPOCHS=parss[0]
+        #self.config.NUM_EPOCHS=parss[0]
         self.queue_thread = reader.Reader(subtoken_to_index=self.subtoken_to_index,
                                           node_to_index=self.node_to_index,
                                           target_to_index=self.target_to_index,
