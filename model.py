@@ -305,6 +305,7 @@ class Model:
         print('Taking max contexts from each example:\t', self.config.MAX_CONTEXTS)
         print('Random path sampling:\t\t\t', self.config.RANDOM_CONTEXTS)
         print('Embedding size:\t\t\t\t', self.config.EMBEDDINGS_SIZE)
+        print('NUM_EPOCHS:\t\t\t\t', self.config.NUM_EPOCHS)
         if self.config.BIRNN:
             print('Using BiLSTMs, each of size:\t\t', self.config.RNN_SIZE // 2)
         else:
