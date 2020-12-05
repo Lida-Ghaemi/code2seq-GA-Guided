@@ -34,12 +34,12 @@ if __name__ == '__main__':
         config = Config.get_debug_config(args)
     else:
         config = Config.get_default_config(args)
-
+    
     model = Model(config)
     print('Created model')
     if config.TRAIN_PATH:
-        aa=[1]
-        model.train(aa)
+        
+        model.train()
     if config.TEST_PATH and not args.data_path:
         results, precision, recall, f1, rouge = model.evaluate()
         print('Accuracy: ' + str(results))
