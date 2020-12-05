@@ -13,8 +13,6 @@ import reader
 from common import Common
 from rouge import FilesRouge
 ####
-pip install deap
-pip install bitstring
 import pandas as pd
 
 from deap import base, creator, tools, algorithms
@@ -100,6 +98,7 @@ class Model:
         print('Started reader...')
 
         multi_batch_start_time = time.time()
+        #self.config.NUM_EPOCHS=4
         for iteration in range(1, (self.config.NUM_EPOCHS // self.config.SAVE_EVERY_EPOCHS) + 1):
             self.queue_thread.reset(self.sess)
             try:
