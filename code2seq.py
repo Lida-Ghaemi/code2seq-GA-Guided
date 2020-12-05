@@ -39,7 +39,7 @@ if __name__ == '__main__':
     print('Created model')
     if config.TRAIN_PATH:
         a43=[1]
-        model.train(a43)
+        model.train()
     if config.TEST_PATH and not args.data_path:
         results, precision, recall, f1, rouge = model.evaluate()
         print('Accuracy: ' + str(results))
